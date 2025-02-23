@@ -1,3 +1,9 @@
+import PortFolioPageComponent from "./_components/common/PortFolioPageComponent";
+
 export default function Home() {
-  return <main>Hello world</main>;
+  return (
+    <main className="min-h-screen bg-gray-100">
+      <PortFolioPageComponent />
+    </main>
+  );
 }
