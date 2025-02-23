@@ -39,5 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ## TODO
 - [x] Create a Next.js app
 - [x] Clear out the base app
-- [x] Create a layout
+- [x] Create a Baisc layout
+- [] Create a very basic portfolio
+
 
