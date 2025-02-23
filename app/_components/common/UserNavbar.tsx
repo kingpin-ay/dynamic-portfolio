@@ -29,7 +29,7 @@ export default function Navbar({ navItems }: NavbarProps) {
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-center space-x-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}

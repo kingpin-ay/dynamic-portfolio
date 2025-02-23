@@ -3,7 +3,6 @@ import { useParams } from "next/navigation";
 import Navbar from "../../_components/common/UserNavbar";
 
 function navbarUrlConstruct(username: string) {
-  console.log("Current username:", username);
   return [
     { name: "Home", href: `/user/${username}` },
     { name: "About", href: `/user/${username}/about` },
@@ -22,9 +21,7 @@ export default function UserLayout({
   children: React.ReactNode;
 }>) {
   const { username }: { username: string } = useParams();
-  console.log("Username:", username);
   const navItems = navbarUrlConstruct(username);
-  console.log("Items :", navItems);
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-800">
       <Navbar navItems={navItems} />

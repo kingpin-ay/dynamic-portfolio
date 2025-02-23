@@ -46,4 +46,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Make centralized Navbar on the /user/[username] page
 - [x] Separate Out all the sections into different page from the /user/[username] page
 - [ ] Make a default fallback page for the /user/[username] page 404
-- [ ] remove resume-download page from the user/[username] page
+- [ ] Remove resume-download page from the user/[username] page
+- [ ] Fix the page layouts
+  - [x] Fix the page layouts for the /user/[username] page
+  - [ ] Fix the page layouts for the /user/[username]/about page
+  - [ ] Fix the page layouts for the /user/[username]/skills page
+  - [ ] Fix the page layouts for the /user/[username]/projects page
+  - [ ] Fix the page layouts for the /user/[username]/experience page
+  - [ ] Fix the page layouts for the /user/[username]/blog page
+  - [ ] Fix the page layouts for the /user/[username]/testimonials page
+  - [ ] Fix the page layouts for the /user/[username]/contacts page
+- [x] Fix The layout of the Navbar
+- [ ] Navlink Highlighter Mechanism
+- [x] Add Image in the home page
