@@ -40,6 +40,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Create a Next.js app
 - [x] Clear out the base app
 - [x] Create a Baisc layout
-- [] Create a very basic portfolio
+- [x] Create a very basic portfolio
+- [x] Create a Basic Mechanism for dark Mode switch
 
 
