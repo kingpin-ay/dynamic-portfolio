@@ -42,5 +42,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Create a Baisc layout
 - [x] Create a very basic portfolio
 - [x] Create a Basic Mechanism for dark Mode switch
+- [x] Separate out the the base url to `user/[username]`
+- [x] Make centralized Navbar on the /user/[username] page
+- [] Separate Out all the sections into different page from the /user/[username] page
 
 
