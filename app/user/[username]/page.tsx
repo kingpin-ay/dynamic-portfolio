@@ -7,7 +7,6 @@ import Projects from "@/app/_components/pages/Projects";
 import ResumeDownload from "@/app/_components/pages/ResumeDownload";
 import Skills from "@/app/_components/pages/Skills";
 import Testimonials from "@/app/_components/pages/Testimonials";
-import { ThemeProvider } from "@/app/_contexts/ThemeContext";
 
 export default function Home() {
   return <PortFolioPageComponent />;
