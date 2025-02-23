@@ -1,29 +1,24 @@
-import About from "@/app/_components/pages/About";
-import Blog from "@/app/_components/pages/Blog";
-import Contact from "@/app/_components/pages/Contact";
-import Experience from "@/app/_components/pages/Experience";
-import Hero from "@/app/_components/pages/Hero";
-import Projects from "@/app/_components/pages/Projects";
-import ResumeDownload from "@/app/_components/pages/ResumeDownload";
-import Skills from "@/app/_components/pages/Skills";
-import Testimonials from "@/app/_components/pages/Testimonials";
-
 export default function Home() {
-  return <PortFolioPageComponent />;
+  return <Hero />;
 }
 
-function PortFolioPageComponent() {
+function Hero() {
   return (
-    <>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Blog />
-      <Testimonials />
-      <Contact />
-      <ResumeDownload />
-    </>
+    <section id="home" className="pt-20 pb-10 bg-gray-50 dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+            <span className="block">Hi, I'm Your Name</span>
+            <span className="block text-indigo-600 dark:text-indigo-400">
+              Full Stack Developer
+            </span>
+          </h1>
+          <p className="mt-3 max-w-md mx-auto text-base text-gray-500 dark:text-gray-400 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            Turning ideas into reality through code. Passionate about creating
+            efficient, scalable, and user-friendly web applications.
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }

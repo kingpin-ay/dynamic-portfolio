@@ -5,18 +5,14 @@ import Link from "next/link";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/app/_contexts/ThemeContext";
 
-const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Experience", href: "#experience" },
-  { name: "Blog", href: "#blog" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#contact" },
-];
+interface NavbarProps {
+  navItems: {
+    name: string;
+    href: string;
+  }[];
+}
 
-export default function Navbar() {
+export default function Navbar({ navItems }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 

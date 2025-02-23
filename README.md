@@ -35,8 +35,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
-
 ## TODO
+
 - [x] Create a Next.js app
 - [x] Clear out the base app
 - [x] Create a Baisc layout
@@ -44,6 +44,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Create a Basic Mechanism for dark Mode switch
 - [x] Separate out the the base url to `user/[username]`
 - [x] Make centralized Navbar on the /user/[username] page
-- [ ] Separate Out all the sections into different page from the /user/[username] page
-
-
+- [x] Separate Out all the sections into different page from the /user/[username] page
+- [ ] Make a default fallback page for the /user/[username] page 404
+- [ ] remove resume-download page from the user/[username] page
