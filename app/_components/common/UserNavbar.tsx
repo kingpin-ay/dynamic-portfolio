@@ -1,20 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import Link from "next/link";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/app/_contexts/ThemeContext";
+import { traceRouteAfterSlashUser } from "@/app/_helper/regex.function";
 
 interface NavbarProps {
   navItems: {
     name: string;
     href: string;
   }[];
+  currentPath: string;
 }
 
-export default function Navbar({ navItems }: NavbarProps) {
+export default function Navbar({ navItems, currentPath }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  const isActive = (href: string) => {
+    return href === currentPath;
+  };
 
   return (
     <nav className="bg-white dark:bg-gray-800 shadow-lg fixed w-full z-10">
@@ -34,7 +40,11 @@ export default function Navbar({ navItems }: NavbarProps) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    isActive(item.href)
+                      ? "text-indigo-600 dark:text-indigo-400"
+                      : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                  }`}
                 >
                   {item.name}
                 </Link>
@@ -68,22 +78,58 @@ export default function Navbar({ navItems }: NavbarProps) {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <MobileNavBar isOpen={isOpen}>
+        {navItems.map((item) => (
+          <MobileNavLinks
+            key={item.href}
+            item={item}
+            isActive={isActive}
+            setIsOpen={setIsOpen}
+          />
+        ))}
+      </MobileNavBar>
     </nav>
+  );
+}
+
+function MobileNavBar({
+  isOpen,
+  children,
+}: {
+  isOpen: boolean;
+  children: React.ReactNode;
+}) {
+  if (!isOpen) return null;
+  return (
+    <div className="md:hidden">
+      <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">{children}</div>
+    </div>
+  );
+}
+
+function MobileNavLinks({
+  item,
+  isActive,
+  setIsOpen,
+}: {
+  item: {
+    name: string;
+    href: string;
+  };
+  isActive: (href: string) => boolean;
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+}) {
+  return (
+    <Link
+      href={item.href}
+      className={`block px-3 py-2 rounded-md text-base font-medium ${
+        isActive(item.href)
+          ? "text-indigo-600 dark:text-indigo-400"
+          : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+      }`}
+      onClick={() => setIsOpen(false)}
+    >
+      {item.name}
+    </Link>
   );
 }

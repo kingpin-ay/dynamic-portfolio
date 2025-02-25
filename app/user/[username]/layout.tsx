@@ -1,6 +1,8 @@
 "use client";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import Navbar from "../../_components/common/UserNavbar";
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import Error from "./error";
 
 function navbarUrlConstruct(username: string) {
   return [
@@ -22,10 +24,11 @@ export default function UserLayout({
 }>) {
   const { username }: { username: string } = useParams();
   const navItems = navbarUrlConstruct(username);
+  const pathname = usePathname();
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-800">
-      <Navbar navItems={navItems} />
-      {children}
+      <Navbar navItems={navItems} currentPath={pathname} />
+      <ErrorBoundary errorComponent={Error}>{children}</ErrorBoundary>
     </main>
   );
 }

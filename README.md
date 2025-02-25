@@ -57,5 +57,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
   - [ ] Fix the page layouts for the /user/[username]/testimonials page
   - [ ] Fix the page layouts for the /user/[username]/contacts page
 - [x] Fix The layout of the Navbar
-- [ ] Navlink Highlighter Mechanism
+- [x] Navlink Highlighter Mechanism
 - [x] Add Image in the home page
+- [ ] Change the FavIcon of the page and the title of the page
+- [x] Add a 404 page
