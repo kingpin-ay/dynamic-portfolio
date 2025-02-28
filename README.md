@@ -50,9 +50,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] Fix the page layouts
   - [x] Fix the page layouts for the /user/[username] page
   - [x] Fix the page layouts for the /user/[username]/about page
-  - [ ] Fix the page layouts for the /user/[username]/skills page
-  - [ ] Fix the page layouts for the /user/[username]/projects page
-  - [ ] Fix the page layouts for the /user/[username]/experience page
+  - [x] Fix the page layouts for the /user/[username]/skills page
+  - [x] Fix the page layouts for the /user/[username]/projects page
+  - [x] Fix the page layouts for the /user/[username]/experience page
   - [ ] Fix the page layouts for the /user/[username]/blog page
   - [ ] Fix the page layouts for the /user/[username]/testimonials page
   - [ ] Fix the page layouts for the /user/[username]/contacts page

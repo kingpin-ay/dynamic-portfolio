@@ -2,6 +2,16 @@ import TopMainHeadingText from "@/app/_components/common/TopMainHeadingText";
 import TopSubHeadingText from "@/app/_components/common/TopSubHeadingText";
 import { Code, Database, Server, Layout, LucideProps } from "lucide-react";
 
+interface SkillBlockProps {
+  skill: {
+    name: string;
+    icon: React.ForwardRefExoticComponent<
+      Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
+    >;
+    description: string;
+  };
+}
+
 const skills = [
   {
     name: "Front-end",
@@ -37,16 +47,6 @@ export default function Skills() {
       </div>
     </div>
   );
-}
-
-interface SkillBlockProps {
-  skill: {
-    name: string;
-    icon: React.ForwardRefExoticComponent<
-      Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
-    >;
-    description: string;
-  };
 }
 
 function SkillBlock({ skill }: SkillBlockProps) {
