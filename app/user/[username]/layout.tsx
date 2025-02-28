@@ -28,7 +28,14 @@ export default function UserLayout({
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-800">
       <Navbar navItems={navItems} currentPath={pathname} />
-      <ErrorBoundary errorComponent={Error}>{children}</ErrorBoundary>
+      <ErrorBoundary errorComponent={Error}>
+        <section
+          id="home"
+          className="pt-20 pb-10 bg-gray-50 dark:bg-gray-800 h-screen flex items-center justify-center"
+        >
+          {children}
+        </section>
+      </ErrorBoundary>
     </main>
   );
 }
