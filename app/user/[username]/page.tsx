@@ -23,7 +23,7 @@ function Hero({ imageUrl }: { imageUrl: string }) {
       </div>
       <div className="text-center">
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
-          <span className="block">Hi, I'm Your Name</span>
+          <span className="block">Hi, I'm Ayush</span>
           <span className="block text-indigo-600 dark:text-indigo-400">
             Full Stack Developer
           </span>

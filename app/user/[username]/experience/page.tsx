@@ -88,7 +88,7 @@ function ExperienceVerticalBlock({
       )}
       <div className="relative flex items-start bg-white dark:bg-gray-800 shadow rounded-lg p-5 transition-colors duration-200">
         <span className="h-9 flex items-center">
-          <span className="relative z-10 w-8 h-8 flex items-center justify-center bg-indigo-600 dark:bg-indigo-500 rounded-full">
+          <span className="relative w-8 h-8 flex items-center justify-center bg-indigo-600 dark:bg-indigo-500 rounded-full">
             <svg
               className="w-5 h-5 text-white"
               xmlns="http://www.w3.org/2000/svg"

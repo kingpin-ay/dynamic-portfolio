@@ -31,7 +31,7 @@ export default function Navbar({ navItems, currentPath }: NavbarProps) {
               href="/"
               className="text-xl font-bold text-gray-800 dark:text-white"
             >
-              Your Name
+              Ayush Mondal
             </Link>
           </div>
           <div className="hidden md:block">
