@@ -31,7 +31,7 @@ export default function UserLayout({
       <ErrorBoundary errorComponent={Error}>
         <section
           id="home"
-          className="pt-20 pb-10 bg-gray-50 dark:bg-gray-800 h-screen flex items-center justify-center"
+          className="pt-20 pb-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-200 h-screen flex items-center justify-center"
         >
           {children}
         </section>

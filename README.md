@@ -49,7 +49,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [ ] Remove resume-download page from the user/[username] page
 - [ ] Fix the page layouts
   - [x] Fix the page layouts for the /user/[username] page
-  - [ ] Fix the page layouts for the /user/[username]/about page
+  - [x] Fix the page layouts for the /user/[username]/about page
   - [ ] Fix the page layouts for the /user/[username]/skills page
   - [ ] Fix the page layouts for the /user/[username]/projects page
   - [ ] Fix the page layouts for the /user/[username]/experience page

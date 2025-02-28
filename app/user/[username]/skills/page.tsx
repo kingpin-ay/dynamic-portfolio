@@ -1,5 +1,3 @@
-"use client";
-import { GET } from "@/app/api/[[...route]]/route";
 import { Code, Database, Server, Layout, LucideProps } from "lucide-react";
 
 const skills = [
@@ -22,18 +20,13 @@ const skills = [
 ];
 
 export default function Skills() {
-  async function main() {
-    const skills = await GET(new Request("/api/user"));
-    console.log(skills.body, skills.status , await skills.json());
-  }
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="lg:text-center">
-        <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+        <h2 className="text-base text-indigo-600 dark:text-indigo-400 font-semibold tracking-wide uppercase">
           Skills
         </h2>
-        <button onClick={main}>hihohooho</button>
-        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           My Tech Stack
         </p>
       </div>
@@ -48,9 +41,7 @@ export default function Skills() {
   );
 }
 
-function SkillBlock({
-  skill,
-}: {
+interface SkillBlockProps {
   skill: {
     name: string;
     icon: React.ForwardRefExoticComponent<
@@ -58,20 +49,27 @@ function SkillBlock({
     >;
     description: string;
   };
-}) {
+}
+
+function SkillBlock({ skill }: SkillBlockProps) {
   return (
     <div
       key={skill.name}
-      className="bg-white overflow-hidden shadow rounded-lg"
+      className="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg transition-colors duration-200"
     >
       <div className="p-5">
         <div className="flex items-center">
-          <skill.icon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
-          <h3 className="ml-2 text-lg leading-6 font-medium text-gray-900">
+          <skill.icon
+            className="h-6 w-6 text-indigo-600 dark:text-indigo-400"
+            aria-hidden="true"
+          />
+          <h3 className="ml-2 text-lg leading-6 font-medium text-gray-900 dark:text-white">
             {skill.name}
           </h3>
         </div>
-        <p className="mt-2 text-base text-gray-500">{skill.description}</p>
+        <p className="mt-2 text-base text-gray-500 dark:text-gray-400">
+          {skill.description}
+        </p>
       </div>
     </div>
   );

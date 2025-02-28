@@ -15,7 +15,7 @@ export default function About() {
           step has been a learning experience.
         </p>
       </div>
-      <div className="mt-10">
+      <div className="mt-10 lg:text-center">
         <p className="text-lg text-gray-500 dark:text-gray-400">
           I started my career as a front-end developer, fascinated by the
           ability to bring designs to life. As I delved deeper into the field, I
