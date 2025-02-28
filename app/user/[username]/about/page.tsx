@@ -1,13 +1,12 @@
+import TopMainHeadingText from "@/app/_components/common/TopMainHeadingText";
+import TopSubHeadingText from "@/app/_components/common/TopSubHeadingText";
+
 export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="lg:text-center">
-        <h2 className="text-base text-gray-900 dark:text-white font-semibold tracking-wide uppercase">
-          About Me
-        </h2>
-        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-indigo-600 dark:text-indigo-400 sm:text-4xl">
-          My Journey as a Developer
-        </p>
+        <TopSubHeadingText text="Skills" />
+        <TopMainHeadingText text="My Tech Stack" />
         <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 lg:mx-auto">
           With a passion for technology and problem-solving, I've embarked on an
           exciting journey in the world of web development. From my first
