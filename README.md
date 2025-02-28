@@ -61,6 +61,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [x] Add Image in the home page
 - [ ] Change the FavIcon of the page and the title of the page
 - [x] Add a 404 page
-- [ ] Change all the name to mine
+- [x] Change all the name to mine
 - [ ] Fill Out the actuall Data for me
 
