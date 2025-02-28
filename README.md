@@ -53,11 +53,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
   - [x] Fix the page layouts for the /user/[username]/skills page
   - [x] Fix the page layouts for the /user/[username]/projects page
   - [x] Fix the page layouts for the /user/[username]/experience page
-  - [ ] Fix the page layouts for the /user/[username]/blog page
-  - [ ] Fix the page layouts for the /user/[username]/testimonials page
-  - [ ] Fix the page layouts for the /user/[username]/contacts page
+  - [x] Fix the page layouts for the /user/[username]/blog page
+  - [x] Fix the page layouts for the /user/[username]/testimonials page
+  - [x] Fix the page layouts for the /user/[username]/contacts page
 - [x] Fix The layout of the Navbar
 - [x] Navlink Highlighter Mechanism
 - [x] Add Image in the home page
 - [ ] Change the FavIcon of the page and the title of the page
 - [x] Add a 404 page
+- [ ] Change all the name to mine
+- [ ] Fill Out the actuall Data for me
+
