@@ -4,15 +4,16 @@ on:
   push:
     branches:
       - main
+      - develop
   pull_request:
     branches:
       - main
-      - develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    container: 
+      image: node:22
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -20,10 +21,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # You can change this to the desired Node.js version
+          node-version: 22  # You can change this to the desired Node.js version
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Build
         run: npm run build
